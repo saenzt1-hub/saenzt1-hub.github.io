@@ -7,6 +7,25 @@
         <title>Simple HTML & CSS Page</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $("#startAnimation").on("click", function () {
+                
+                $("#page-title")
+                .animate({ fontSize: "3.5em" }, 800)
+                .animate({ fontSize: "2em" }, 800);
+
+            $("#page-title").css("color", "red");
+
+            setTimeout(function () {
+                $("#page-title").css("color", "black");
+
+            }, 1600);
+
+            $("#profile-pic").css("border", "5px solid black");
+            });
+        });
+    </script>
     </head>
 
 
@@ -64,24 +83,6 @@
             </section>
 
         </main>
-        <script>
-        $(document).ready(function() {
-            $("#startAnimation").on("click", function () {
-                
-                $("#page-title")
-                .animate({ fontSize: "3.5em" }, 800)
-                .animate({ fontSize: "2em" }, 800);
-
-            $("#page-title").css("color", "red");
-
-            setTimeout(function () {
-                $("#page-title").css("color", "black");
-
-            }, 1600);
-
-            $("#profile-pic").css("border", "5px solid black");
-            });
-        });
-    </script>
+        
     </body>
 </html>
